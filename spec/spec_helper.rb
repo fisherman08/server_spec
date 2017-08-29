@@ -22,9 +22,9 @@ options = Net::SSH::Config.for(host)
 
 options[:user] = setting['ssh_user']
 
-
 set :host,        options[:host_name] || host
 set :ssh_options, options
+set :request_pty, true
 
 # Disable sudo
 # set :disable_sudo, true

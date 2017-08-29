@@ -18,7 +18,7 @@ namespace :spec do
     ENV['timezone']       ||= 'JST'
     ENV['tomcat_version'] ||= '7'
 
-    desc "Run serverspec tests to "
+    desc "Run serverspec tests to #{ENV['host']} as #{ENV['user']}"
 
     RSpec::Core::RakeTask.new do |t|
       t.pattern = "spec/roles/#{ENV['role']}.rb"
